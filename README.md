@@ -4,8 +4,9 @@ Primula.W8
 Windows 8 application that is a cash dest made for tablets
 
 
-Libraries / Resources that helps us to create this application :
+Libraries / Resources that help us to create this application :
 - http://msdn.microsoft.com/en-US/windows/apps/hh779072
+- http://caliburnmicro.codeplex.com/wikipage?title=Introduction&referringTitle=Documentation (Documentaction for Caliburn.Micro framework)
 
 Video (in Polish):
 - http://channel9.msdn.com/Series/Tworzenie-aplikacji-w-stylu-Modern-UI-dla-programist-w/MVVM-Tworzenie-aplikacji-dla-systemu-Windows-8-dla-programistw
