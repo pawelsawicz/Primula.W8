@@ -7,7 +7,43 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="15 50 0 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="150" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Login Panel" Foreground="Black" FontSize="54"/>
+                <Image Source="/Assets/branding/logo_small_primula.png" Grid.Column="1" Height="100" Width="100" />
+            </Grid>
+        </StackPanel>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="65 0 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="User name" Grid.Row="1" Grid.Column="1" Foreground="Black" FontSize="28" Margin="50 0 0 0"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Height="50" Width="400" Background="#c4f492" BorderThickness="5" BorderBrush="#8cc63f" FontSize="20"/>
+            <TextBlock Text="Password" Grid.Row="2" Grid.Column="1" Foreground="Black" FontSize="28" Margin="50 0 0 0"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Height="50" Width="400" Background="#c4f492" BorderThickness="5" BorderBrush="#8cc63f" FontSize="20"/>
+            <Button Content="Log in!" Grid.Row="3" Grid.Column="1" Width="400" Height="50" Margin="50 0 50 0" Background="#c4f492" Foreground="#000" Click="TryLogin" FontSize="20"/>
+        </Grid>
     </Grid>
 </Page>

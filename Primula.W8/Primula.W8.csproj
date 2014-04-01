@@ -122,6 +122,7 @@
     <None Include="Primula.W8_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\branding\logo_small_primula.png" />
     <Content Include="Assets\branding\splashscreen.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\SmallLogo.png" />
