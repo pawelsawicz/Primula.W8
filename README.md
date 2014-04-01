@@ -11,3 +11,25 @@ Libraries / Resources that help us to create this application :
 Video (in Polish):
 - http://channel9.msdn.com/Series/Tworzenie-aplikacji-w-stylu-Modern-UI-dla-programist-w/MVVM-Tworzenie-aplikacji-dla-systemu-Windows-8-dla-programistw
 - http://channel9.msdn.com/Series/Tworzenie-aplikacji-w-stylu-Modern-UI-dla-programist-w/MVVM-Command-cz2-Tworzenie-aplikacji-dla-systemu-Windows-8-dla-programisty
+
+Common Views
+- Splashscreen 
+- LoginView (need account if you wanna use our application)
+
+Seller Views
+- Dashboard (This view/page is home of each user, here is basic information about seller, button that allow us to start with new order)
+- OrderCandidateView (This view is first step to make a order, at this stage basket is mutable)
+- FinalizeOrderView - at this step, all items from OrderCandidate are immutable! also at this stage we decide about payment method)
+- OrderPaymentView - last stage here is the final confirmation maked order, after this application will navigate us to Dashboard
+
+
+Design info :
+
+Fonts:
+- TextBoxes : 28
+- Buttons : 20
+- Title (view) : 54
+
+Colors:
+- #C4f492
+- #8CC63F
