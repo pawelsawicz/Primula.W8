@@ -103,6 +103,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\BooleanNegationConverter.cs" />
+    <Compile Include="Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Common\RichTextColumns.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\DashboardView.xaml.cs">
       <DependentUpon>DashboardView.xaml</DependentUpon>
@@ -125,6 +130,7 @@
     <Content Include="Assets\branding\logo_small_primula.png" />
     <Content Include="Assets\branding\splashscreen.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\mock_images\fb_avatar.png" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\splashscreen.scale-100.png" />
     <Content Include="Assets\splashscreen.scale-140.png" />
