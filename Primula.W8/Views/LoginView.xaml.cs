@@ -34,6 +34,34 @@ namespace Primula.W8.Views
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+
+        }
+
+        protected void GoBack(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame.CanGoBack)
+            {
+                this.Frame.GoBack();
+            }
+        }
+
+        protected void GoForward(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame.CanGoForward)
+            {
+                this.Frame.GoForward();
+            }
+        }
+
+        protected void GoHome(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame != null)
+            {
+                while (this.Frame.CanGoBack)
+                {
+                    this.Frame.GoBack();
+                }
+            }
         }
 
         private void TryLogin(object sender, RoutedEventArgs e)
