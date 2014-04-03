@@ -8,6 +8,9 @@ Libraries / Resources that help us to create this application :
 - http://msdn.microsoft.com/en-US/windows/apps/hh779072
 - http://caliburnmicro.codeplex.com/wikipage?title=Introduction&referringTitle=Documentation (Documentaction for Caliburn.Micro framework)
 
+MVVM & Caliburn.Micro Framework resources :
+- https://caliburnmicro.codeplex.com/wikipage?title=Working%20with%20WinRT&referringTitle=Documentation
+
 Video (in Polish):
 - http://channel9.msdn.com/Series/Tworzenie-aplikacji-w-stylu-Modern-UI-dla-programist-w/MVVM-Tworzenie-aplikacji-dla-systemu-Windows-8-dla-programistw
 - http://channel9.msdn.com/Series/Tworzenie-aplikacji-w-stylu-Modern-UI-dla-programist-w/MVVM-Command-cz2-Tworzenie-aplikacji-dla-systemu-Windows-8-dla-programisty
