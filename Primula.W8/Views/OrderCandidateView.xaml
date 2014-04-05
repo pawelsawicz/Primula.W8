@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="Primula.W8.Views.OrderCandidateView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Primula.W8.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Style="{StaticResource MainGridThemeResource}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="GoBack" Style="{StaticResource BackButtonStyle}"/>
+            <TextBlock Grid.Column="1" Text="{Binding Title}" Style="{StaticResource PageHeaderTextStyle}"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource MainGridOrderCandidate}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.65*" />
+                <ColumnDefinition Width="0.35*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0">
+                <ListView SelectionMode="Multiple">
+                    <ListViewItem>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="400" />
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="200" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="1" />
+                            <TextBlock Grid.Column="1" Text="Fish, Tomatoes, fried chicken" Foreground="Chocolate" TextWrapping="Wrap"/>
+                            <TextBlock Grid.Column="2" Text="0.5" Foreground="Black" />
+                            <TextBlock Grid.Column="3" Text="Kg" Foreground="Black" />
+                            <TextBlock Grid.Column="5" Text="35.99" Foreground="Black" />
+                        </Grid>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="400" />
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="200" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="1" />
+                            <TextBlock Grid.Column="1" Text="Fish, Tomatoes, fried chicken" Foreground="Chocolate" TextWrapping="Wrap"/>
+                            <TextBlock Grid.Column="2" Text="0.5" Foreground="Black" />
+                            <TextBlock Grid.Column="3" Text="Kg" Foreground="Black" />
+                            <TextBlock Grid.Column="5" Text="35.99" Foreground="Black" />
+                        </Grid>
+                    </ListViewItem>
+                </ListView>
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.50*" />
+                    <ColumnDefinition Width="0.25*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <TextBlock Text="Total Count :" Foreground="Black" FontSize="20" />
+                    <TextBlock Text="56" Foreground="Black" FontSize="20" />                    
+                </StackPanel>
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <TextBlock Text="Total due :" Foreground="Black" FontSize="20" />
+                    <TextBlock Text="698.63 $" Foreground="Black" FontSize="20" />
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1" Grid.RowSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Height="50" Width="250" Content="Add" Background="Chartreuse" />
+                <Button Grid.Row="1" Height="50" Width="250" Content="Add by camera" Background="Chartreuse" />
+                <Grid Grid.Row="2">
+                    
+                </Grid>
+                <Button Grid.Row="3" Height="50" Width="250" Content="Proceed to payment" Background="Chartreuse" />
+            </Grid>            
+        </Grid>
+    </Grid>
+    
+    <Page.BottomAppBar>
+        <AppBar IsHitTestVisible="True">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Remove all" />                
+                <Button Content="Remove" />
+                <Button Content="Update" />
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>

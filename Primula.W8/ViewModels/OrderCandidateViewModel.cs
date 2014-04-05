@@ -1,33 +1,23 @@
-﻿using System;
+﻿using Caliburn.Micro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Caliburn.Micro;
-using Primula.W8.Views;
 
 namespace Primula.W8.ViewModels
 {
-    public class DashboardViewModel : ViewModelBase
+    public class OrderCandidateViewModel : ViewModelBase
     {
         private readonly INavigationService _navigationService;
 
-        public DashboardViewModel(INavigationService navigationService)
+        public OrderCandidateViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            _title = "Dashboard Page";
             _navigationService = navigationService;
+            _title = "New Order - Step 1 / 4";
         }
 
-        public void TryPlaceNewOrder()
-        {
-            _navigationService.Navigate(typeof(OrderCandidateView));
-        }
-
-        protected override void OnInitialize()
-        {
-            base.OnInitialize();
-        }
 
         private string _title;
         public string Title
