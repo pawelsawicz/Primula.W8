@@ -25,48 +25,6 @@ namespace Primula.W8.Views
         public LoginView()
         {
             this.InitializeComponent();
-        }
-
-        /// <summary>
-        /// Invoked when this page is about to be displayed in a Frame.
-        /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.  The Parameter
-        /// property is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-
-        }
-
-        protected void GoBack(object sender, RoutedEventArgs e)
-        {
-            if (this.Frame.CanGoBack)
-            {
-                this.Frame.GoBack();
-            }
-        }
-
-        protected void GoForward(object sender, RoutedEventArgs e)
-        {
-            if (this.Frame.CanGoForward)
-            {
-                this.Frame.GoForward();
-            }
-        }
-
-        protected void GoHome(object sender, RoutedEventArgs e)
-        {
-            if (this.Frame != null)
-            {
-                while (this.Frame.CanGoBack)
-                {
-                    this.Frame.GoBack();
-                }
-            }
-        }
-
-        private void TryLogin(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(DashboardView));
-        }
+        }         
     }
 }
