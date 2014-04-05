@@ -1835,7 +1835,39 @@
     <SolidColorBrush x:Key="BackButtonPressedForegroundThemeBrush" Color="#8CC63F" />
     <SolidColorBrush x:Key="BackButtonPointerOverForegroundThemeBrush" Color="#C4f492" />
     <SolidColorBrush x:Key="BackButtonPressedBackgroundThemeBrush" Color="White" />
+    
     <!-- end predefined styles-->
+    
+    <!-- Custom Primula Styles -->
+    <Style x:Key="MainGridThemeResource" TargetType="Grid">
+        <Setter Property="Background" Value="White" />
+    </Style>
+    <Style x:Key="MainGridLoginPage" TargetType="Grid">
+        <Setter Property="Margin" Value="65 0 0 0"/>
+    </Style>
+    <Style x:Key="TextBoxLabels" TargetType="TextBlock">
+        <Setter Property="Margin" Value="50 0 0 0"/>
+        <Setter Property="FontSize" Value="28"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+    <Style x:Key="TextBoxGreenInput" TargetType="TextBox">
+        <Setter Property="Height" Value="50" />
+        <Setter Property="Width" Value="400" />
+        <Setter Property="Background" Value="#c4f492" />
+        <Setter Property="BorderThickness" Value="5" />
+        <Setter Property="BorderBrush" Value="#8cc63f" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+    <Style x:Key="LoginButtonStyle" TargetType="Button">
+        <Setter Property="Height" Value="50" />
+        <Setter Property="Width" Value="400" />
+        <Setter Property="Margin" Value="50 0 50 0" />
+        <Setter Property="Background" Value="#c4f492"/>
+        <Setter Property="Foreground" Value="#000" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+        
+    <!-- End of custom styles-->
 
 
 </ResourceDictionary>
