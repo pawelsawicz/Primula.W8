@@ -1875,7 +1875,20 @@
         <Setter Property="BorderBrush" Value="#8cc63f" />
         <Setter Property="FontSize" Value="20" />
     </Style>
-        
+
+    <Style x:Key="MainGridDashboardPage" TargetType="Grid">
+        <Setter Property="Margin" Value="65 0 0 0" />
+    </Style>
+    <Style x:Key="PersonalInfoLabel" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#8CC63F" />
+        <Setter Property="FontSize" Value="28" />                
+    </Style>
+    <Style x:Key="PlaceNewOrderButton" TargetType="Button">
+        <Setter Property="Height" Value="200" />
+        <Setter Property="Width" Value="400" />
+        <Setter Property="Background" Value="#8CC63F" />
+        <Setter Property="FontSize" Value="58" />
+    </Style>
     <!-- End of custom styles-->
 
 

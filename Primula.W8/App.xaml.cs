@@ -42,7 +42,9 @@ namespace Primula.W8
         {
             _container = new WinRTContainer();
             _container.RegisterWinRTServices();
+
             _container.PerRequest<LoginViewModel>();
+            _container.PerRequest<DashboardViewModel>();
         }
 
         protected override object GetInstance(Type service, string key)

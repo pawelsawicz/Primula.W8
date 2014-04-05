@@ -24,23 +24,6 @@ namespace Primula.W8.Views
         public DashboardView()
         {
             this.InitializeComponent();
-        }
-
-        /// <summary>
-        /// Invoked when this page is about to be displayed in a Frame.
-        /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.  The Parameter
-        /// property is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-        }
-
-        protected void GoBack(object sender, RoutedEventArgs e)
-        {
-            if (this.Frame.CanGoBack)
-            {
-                this.Frame.GoBack();
-            }
-        }
+        }             
     }
 }
