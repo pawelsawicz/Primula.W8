@@ -11,8 +11,8 @@
         <CollectionViewSource
             x:Name="itemsViewSource"
             Source="{Binding AvailablePayments}"/>       
-    </Page.Resources>    
-    <Grid Style="{StaticResource LayoutRootStyle}">
+    </Page.Resources>
+    <Grid Style="{StaticResource MainGridThemeResource}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>

@@ -34,5 +34,9 @@
             </StackPanel>
         </Grid>
     </DataTemplate>
+
+    <Style x:Key="MainGridCashPaymentPage" TargetType="Grid">
+        <Setter Property="Margin" Value="65 0 0 0"/>
+    </Style>
     
 </ResourceDictionary>

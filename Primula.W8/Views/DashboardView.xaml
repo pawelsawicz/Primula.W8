@@ -9,7 +9,7 @@
 
     <Grid Style="{StaticResource MainGridThemeResource}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="150" />
+            <RowDefinition Height="140" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid>

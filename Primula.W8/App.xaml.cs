@@ -47,6 +47,7 @@ namespace Primula.W8
             _container.PerRequest<DashboardViewModel>();
             _container.PerRequest<OrderCandidateViewModel>();
             _container.PerRequest<TypeOfPaymentViewModel>();
+            _container.PerRequest<CashPaymentViewModel>();
         }
 
         protected override object GetInstance(Type service, string key)

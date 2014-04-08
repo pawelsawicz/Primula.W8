@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using Primula.W8.Common;
 using Primula.W8.Enums;
+using Primula.W8.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,21 @@ namespace Primula.W8.ViewModels
 
             if (paymentSelected != null)
             {
-                throw new NotImplementedException();
+                switch (paymentSelected.PaymentMethods)
+                {
+                    case PaymentMethodsEnum.Cash:
+                        _navigationService.UriFor<CashPaymentViewModel>().Navigate();
+                        break;
+                    case PaymentMethodsEnum.Terminal:
+                        _navigationService.UriFor<CashPaymentViewModel>().Navigate();
+                        break;
+                    case PaymentMethodsEnum.CreditCard:
+                        _navigationService.UriFor<CashPaymentViewModel>().Navigate();
+                        break;
+                    default:
+                        _navigationService.UriFor<CashPaymentViewModel>().Navigate();
+                        break;
+                }
             }
         }
 
@@ -52,21 +67,24 @@ namespace Primula.W8.ViewModels
             var methods = new List<PaymentMethod>();
             methods.Add(new PaymentMethod()
             {
-                Title = PaymentMethodsEnum.Cash,
+                Title = "Cash",
                 Popularity = 1,
-                Image = "/Assets/mock_images/money.png"
+                Image = "/Assets/mock_images/money.png",
+                PaymentMethods = PaymentMethodsEnum.Cash
             });
             methods.Add(new PaymentMethod()
             {
-                Title = PaymentMethodsEnum.CreditCard,
+                Title = "Credit Card",
                 Popularity = 3,
-                Image = "/Assets/mock_images/creditcard.png"
+                Image = "/Assets/mock_images/creditcard.png",
+                PaymentMethods = PaymentMethodsEnum.CreditCard
             });
             methods.Add(new PaymentMethod()
             {
-                Title = PaymentMethodsEnum.Terminal,
+                Title = "Terminal",
                 Popularity = 2,
-                Image = "/Assets/mock_images/terminal.png"
+                Image = "/Assets/mock_images/terminal.png",
+                PaymentMethods = PaymentMethodsEnum.Terminal
             });
             methods.OrderBy(method => method.Popularity);
             AvailablePayments.AddRange(methods);
