@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using Primula.W8.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,10 @@ namespace Primula.W8.ViewModels
             _title = "New Order - Step 1 / 4";
         }
 
+        public void ProceedToPayment()
+        {
+            _navigationService.Navigate(typeof(TypeOfPaymentView));
+        }
 
         private string _title;
         public string Title

@@ -93,7 +93,7 @@
                 <Grid Grid.Row="2">
                     
                 </Grid>
-                <Button Grid.Row="3" Height="50" Width="250" Content="Proceed to payment" Background="Chartreuse" />
+                <Button x:Name="ProceedToPayment" Grid.Row="3" Height="50" Width="250" Content="Proceed to payment" Background="Chartreuse" />
             </Grid>            
         </Grid>
     </Grid>
