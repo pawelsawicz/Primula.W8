@@ -1,9 +1,6 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
-
-
 
     <DataTemplate x:Key="Primula250x250PaymentItemTemplate">
         <Grid HorizontalAlignment="Left" Width="250" Height="250">
@@ -39,4 +36,9 @@
         <Setter Property="Margin" Value="65 0 0 0"/>
     </Style>
     
+    <Style x:Name="TextCustomerSectionTitle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="42" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
 </ResourceDictionary>

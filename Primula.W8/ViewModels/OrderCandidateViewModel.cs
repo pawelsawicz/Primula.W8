@@ -23,7 +23,7 @@ namespace Primula.W8.ViewModels
         {
             _navigationService.Navigate(typeof(TypeOfPaymentView));
         }
-
+       
         private string _title;
         public string Title
         {
@@ -31,6 +31,6 @@ namespace Primula.W8.ViewModels
             {
                 return _title;
             }
-        }
+        }        
     }
 }

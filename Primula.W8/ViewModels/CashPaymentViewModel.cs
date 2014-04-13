@@ -24,5 +24,9 @@ namespace Primula.W8.ViewModels
             get { return _title; }
         }
 
+        public void FinalizePayment()
+        {
+            
+        }
     }
 }

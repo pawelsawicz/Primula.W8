@@ -21,7 +21,77 @@
             <TextBlock Grid.Column="1" Text="{Binding Title}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
         <Grid Grid.Row="1" Style="{StaticResource MainGridCashPaymentPage}">
-            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical">
+                <TextBlock Text="Customer section" Style="{StaticResource TextCustomerSectionTitle}"/>
+                <Grid Margin="0 0 0 12">
+                    <TextBlock Text="Cash :" Style="{StaticResource TextBoxLabels}" VerticalAlignment="Center" />
+                    <TextBox Style="{StaticResource TextBoxGreenInput}" Margin="24 0 0 0" />
+                </Grid>
+                <Grid>
+                    <TextBlock Text="Change :" Style="{StaticResource TextBoxLabels}" VerticalAlignment="Center" />
+                    <TextBlock Text="25$" Style="{StaticResource TextBoxLabels}" HorizontalAlignment="Center" />
+                </Grid>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical">
+                <TextBlock Text="Order summary" Style="{StaticResource TextCustomerSectionTitle}"/>                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock Text="Total Due A" Style="{StaticResource TextBoxLabels}" />
+                        <TextBlock Text="154.56$" Style="{StaticResource TextBoxLabels}" HorizontalAlignment="Center" />
+                    </Grid>
+                    <Grid Grid.Row="1" Margin="24 0 0 0">
+                        <TextBlock Text="Tax A (23.00%)" Style="{StaticResource TextBoxLabels}" />
+                        <TextBlock Text="154.56$" Style="{StaticResource TextBoxLabels}" HorizontalAlignment="Center" />
+                    </Grid>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock Text="Total Due A" Style="{StaticResource TextBoxLabels}" />
+                        <TextBlock Text="154.56$" Style="{StaticResource TextBoxLabels}" HorizontalAlignment="Center" />
+                    </Grid>
+                    <Grid Grid.Row="1" Margin="24 0 0 0">
+                        <TextBlock Text="Tax A (8.00%)" Style="{StaticResource TextBoxLabels}" />
+                        <TextBlock Text="154.56$" Style="{StaticResource TextBoxLabels}" HorizontalAlignment="Center" />
+                    </Grid>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock Text="Total Due A" Style="{StaticResource TextBoxLabels}" />
+                        <TextBlock Text="154.56$" Style="{StaticResource TextBoxLabels}" HorizontalAlignment="Center" />
+                    </Grid>
+                    <Grid Grid.Row="1" Margin="24 0 0 0">
+                        <TextBlock Text="Tax A (5.00%)" Style="{StaticResource TextBoxLabels}" />
+                        <TextBlock Text="154.56$" Style="{StaticResource TextBoxLabels}" HorizontalAlignment="Center" />
+                    </Grid>
+                </Grid>
+                <Grid>
+                    <TextBlock Text="Total Due :" Style="{StaticResource TextBoxLabels}" FontSize="36"/>
+                    <TextBlock Text="699$" Style="{StaticResource TextBoxLabels}" HorizontalAlignment="Center" FontSize="36" />
+                </Grid>
+            </StackPanel>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Button x:Name="FinalizePayment" Content="Finalize Payment" Style="{StaticResource LoginButtonStyle}" />
+            </Grid> 
         </Grid>
     </Grid>
 </Page>
