@@ -43,6 +43,7 @@ namespace Primula.W8.ViewModels
                 Name = "Electrical goods",
                 TotalPrice = 140
             });
+
             OrderedTypesOfProducts.AddRange(typesOfProducts);
         }
 
