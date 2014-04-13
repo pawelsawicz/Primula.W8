@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using Primula.W8.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace Primula.W8.ViewModels
 
         public void FinalizePayment()
         {
-            
+            _navigationService.Navigate(typeof(FinalizePaymentView));
         }
     }
 }

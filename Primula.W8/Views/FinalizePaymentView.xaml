@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="Primula.W8.Views.FinalizePaymentView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Primula.W8.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+    xmlns:chart="using:De.TorstenMandelkow.MetroChart"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <CollectionViewSource
+            x:Name="itemsViewSource"
+            Source="{Binding OrderedTypesOfProducts}"/>
+    </Page.Resources>
+
+    <Grid Style="{StaticResource MainGridThemeResource}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="GoBack" Style="{StaticResource BackButtonStyle}"/>
+            <TextBlock Grid.Column="1" Text="{Binding Title}" Style="{StaticResource PageHeaderTextStyle}"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*" />
+                <RowDefinition Height="0.2*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0" Margin="-5,10,5,116" Grid.RowSpan="2">
+                <StackPanel>
+                    <Grid Margin="0 0 0 24">
+                        <TextBlock Text="send e-receipt ?" Style="{StaticResource TextBoxLabels}" />
+                        <CheckBox Width="40" Height="40" BorderBrush="Chartreuse" BorderThickness="5"/>
+                    </Grid>
+                    <Grid>
+                        <TextBlock Text="Customer e-mail :" Style="{StaticResource TextBoxLabels}" VerticalAlignment="Center" />
+                        <TextBox Style="{StaticResource TextBoxGreenInput}" HorizontalAlignment="Right" />
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <chart:PieChart
+                   Style="{StaticResource MinimalChartStyle}"
+                   ChartTitle="Summary of order"
+                   ChartSubTitle="how many you spent of each products type">
+                    <chart:PieChart.Series>
+                        <chart:ChartSeries
+                            SeriesTitle="Type"
+                            DisplayMember="Name"
+                            ValueMember="TotalPrice"
+                            ItemsSource="{Binding Source={StaticResource itemsViewSource}}" />  
+                    </chart:PieChart.Series>
+                </chart:PieChart>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Button x:Name="ConfirmAndReturnToDashboard" Content="Confirm and return to dashboard" Style="{StaticResource LoginButtonStyle}" />
+            </Grid>
+            </Grid>
+    </Grid>
+</Page>
