@@ -13,7 +13,5 @@ namespace Primula.W8.Common
         public int Popularity { get; set; }        
         public string Image { get; set; }
         public PaymentMethodsEnum PaymentMethods { get; set; }
-
-
     }
 }
