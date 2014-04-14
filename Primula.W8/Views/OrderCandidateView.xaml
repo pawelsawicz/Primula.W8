@@ -83,8 +83,8 @@
             </Grid>
             <Grid Grid.Column="1" Grid.RowSpan="3">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="100" />
-                    <RowDefinition Height="100" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="100" />
                 </Grid.RowDefinitions>
@@ -106,5 +106,5 @@
                 <Button Content="Update" />
             </StackPanel>
         </AppBar>
-    </Page.BottomAppBar>
+    </Page.BottomAppBar>  
 </Page>
