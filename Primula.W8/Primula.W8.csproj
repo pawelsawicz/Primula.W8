@@ -115,6 +115,8 @@
     <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="ViewModels\FinalizePaymentViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\NewProductToOrderByCameraViewModel.cs" />
+    <Compile Include="ViewModels\NewProductToOrderViewModel.cs" />
     <Compile Include="ViewModels\OrderCandidateViewModel.cs" />
     <Compile Include="ViewModels\TypeOfPaymentViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
@@ -129,6 +131,12 @@
     </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewProductToOrderByCameraView.xaml.cs">
+      <DependentUpon>NewProductToOrderByCameraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewProductToOrderView.xaml.cs">
+      <DependentUpon>NewProductToOrderView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\OrderCandidateView.xaml.cs">
       <DependentUpon>OrderCandidateView.xaml</DependentUpon>
@@ -188,6 +196,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewProductToOrderByCameraView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewProductToOrderView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

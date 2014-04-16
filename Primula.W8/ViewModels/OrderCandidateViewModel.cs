@@ -23,6 +23,16 @@ namespace Primula.W8.ViewModels
         {
             _navigationService.Navigate(typeof(TypeOfPaymentView));
         }
+
+        public void AddNewProductManually()
+        {
+            _navigationService.Navigate(typeof(NewProductToOrderView));
+        }
+
+        public void AddNewProductCamera()
+        {
+            _navigationService.Navigate(typeof(NewProductToOrderByCameraView));
+        }
        
         private string _title;
         public string Title
