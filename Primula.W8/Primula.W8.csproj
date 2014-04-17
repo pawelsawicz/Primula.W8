@@ -163,6 +163,7 @@
     <Content Include="Assets\mock_images\fb_avatar.png" />
     <Content Include="Assets\mock_images\money.png" />
     <Content Include="Assets\mock_images\terminal.png" />
+    <Content Include="Assets\mock_images\sampleproduct.jpg" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\splashscreen.scale-100.png" />
     <Content Include="Assets\splashscreen.scale-140.png" />
