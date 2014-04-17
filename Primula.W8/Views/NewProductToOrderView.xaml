@@ -7,7 +7,61 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid Style="{StaticResource MainGridThemeResource}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="GoBack" Style="{StaticResource BackButtonStyle}"/>
+            <TextBlock Grid.Column="1" Text="{Binding Title}" Style="{StaticResource PageHeaderTextStyle}"/>
+        </Grid>
+        <Grid Grid.Row="1" Style="{StaticResource MainGridAddItemToOrder}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.7*" />
+                <ColumnDefinition Width="0.3*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.15*" />
+                <RowDefinition Height="0.85*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0">
+                <TextBlock Text="Search :" Style="{StaticResource TextBoxLabels}" VerticalAlignment="Center" /> 
+                <TextBox Style="{StaticResource TextBoxGreenInput}"/>
+            </Grid>            
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <ListBox SelectionMode="Single">
+                    <ListBoxItem>
+                        <Grid Width="900">         
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.1*" />
+                                <ColumnDefinition Width="0.1*" />
+                                <ColumnDefinition Width="0.2*" />
+                                <ColumnDefinition Width="0.1*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="These Boots Are Made For Walkin" FontSize="24" />
+                            <TextBlock Grid.Column="1" Text="Nike" FontSize="24"/>
+                            <TextBlock Grid.Column="2" Text="item" FontSize="24" />
+                            <TextBlock Grid.Column='3' Text="14,99" FontSize="24" />
+                            <TextBlock Grid.Column="4" Text="USD" FontSize="24" />                                                    
+                        </Grid>
+                    </ListBoxItem>
+                </ListBox>                
+            </Grid>
+        </Grid>
     </Grid>
+    <Page.BottomAppBar>
+        <AppBar>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Search" />
+                <Button Content="Add" />
+                <Button Content="Clear" />
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>    
 </Page>
