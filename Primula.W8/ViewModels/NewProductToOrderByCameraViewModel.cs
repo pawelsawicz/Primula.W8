@@ -16,7 +16,8 @@ namespace Primula.W8.ViewModels
         {
             _navigationService = navigationService;
             _title = "Add new product to order by camera";
-        }
+            
+        }   
 
         private string _title;
         public string Title

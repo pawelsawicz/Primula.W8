@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Capture;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,18 +22,21 @@ namespace Primula.W8.Views
     /// </summary>
     public sealed partial class NewProductToOrderByCameraView : Page
     {
+        private MediaCapture _mediaCapture { get; set; }
+
         public NewProductToOrderByCameraView()
         {
             this.InitializeComponent();
+            _mediaCapture = new MediaCapture();
+            InitializeCameraSource();
         }
 
-        /// <summary>
-        /// Invoked when this page is about to be displayed in a Frame.
-        /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.  The Parameter
-        /// property is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        private async void InitializeCameraSource()
         {
+            await _mediaCapture.InitializeAsync();
+            CaptureControl.Source = _mediaCapture;
+            await _mediaCapture.StartPreviewAsync();
         }
+        
     }
 }
