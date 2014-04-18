@@ -21,6 +21,9 @@ Common Views
 Seller Views
 - Dashboard (This view/page is home of each user, here is basic information about seller, button that allow us to start with new order)
 - OrderCandidateView (This view is first step to make a order, at this stage basket is mutable)
+	- NewProductToOrderView - this view provide for us a search engine, we can query for a name, code-bar, name and producer. This view provide search engine but you have to manually put query into searchbox
+	- NewProductToOrderByCameraView - this view also provide us a search engine but this time it take a photo and scan product codebar or qr code.
+	Basic  
 - TypeOfPayment - at this step you can choose type of payment.
 - CashPaymentView, TerminalPaymentView, CreditCardPaymentView - here is a step where you have to put information to finalize payment i.e (credit card, nfc, terminal signal, how many cash customer gave you)
 - FinalizeOrderView - at this step, all items from OrderCandidate are immutable! also at this stage we decide about payment method)
