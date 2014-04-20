@@ -29,6 +29,11 @@ namespace Primula.W8.ViewModels
             base.OnInitialize();
         }
 
+        public void GoBack()
+        {
+            _navigationService.Navigate(typeof(LoginView));
+        }
+
         private string _title;
         public string Title
         {
