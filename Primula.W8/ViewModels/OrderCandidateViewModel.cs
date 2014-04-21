@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using Primula.W8.NotifyViewModels;
 using Primula.W8.Views;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,13 @@ namespace Primula.W8.ViewModels
         {
             _navigationService = navigationService;
             _title = "New Order - Step 1 / 4";
+            ProductsOrder = new BindableCollection<ProductOrderViewModel>();
+        }
+
+        public BindableCollection<ProductOrderViewModel> ProductsOrder
+        {
+            get;
+            private set;
         }
 
         public void ProceedToPayment()
@@ -33,7 +41,7 @@ namespace Primula.W8.ViewModels
         {
             _navigationService.Navigate(typeof(NewProductToOrderByCameraView));
         }
-       
+
         private string _title;
         public string Title
         {
@@ -41,6 +49,68 @@ namespace Primula.W8.ViewModels
             {
                 return _title;
             }
-        }        
+        }
+
+        private int _totalCount;
+        public int TotalCount
+        {
+            get
+            {
+                return _totalCount;
+            }
+            set
+            {
+                _totalCount = value;
+                NotifyOfPropertyChange(() => TotalCount);
+            }
+        }
+
+        private decimal _totalDue;
+        public decimal TotalDue
+        {
+            get
+            {
+                return _totalDue;
+            }
+            set
+            {
+                _totalDue = value;
+                NotifyOfPropertyChange(() => TotalDue);
+            }
+        }
+
+        public int ProductIdFromSearchEngine { get; set; }
+
+        protected override void OnInitialize()
+        {
+            if (ProductIdFromSearchEngine != 0)
+            {
+                var product = GetProductById(ProductIdFromSearchEngine);
+                ProductsOrder.Add(product);
+                TotalCount = ProductsOrder.Count;
+                TotalDue = GetTotalDue(ProductsOrder);
+            }
+        }
+
+        private decimal GetTotalDue(ICollection<ProductOrderViewModel> productsToCompute)
+        {
+            decimal totalDue = 0;
+            foreach (var item in productsToCompute)
+            {
+                totalDue += item.BruttoPrice;
+            }
+            return totalDue;
+        }
+
+        private ProductOrderViewModel GetProductById(int productId)
+        {
+            return new ProductOrderViewModel()
+                {
+                    Name = "New Boots",
+                    Amount = 1.0M,
+                    Unit = Enums.UnitsEnum.Item,
+                    BruttoPrice = 49.99M
+                };
+        }
     }
 }

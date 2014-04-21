@@ -31,39 +31,25 @@
                 <RowDefinition Height="0.1*" />
             </Grid.RowDefinitions>
             <Grid Grid.Column="0" Grid.Row="0">
-                <ListView SelectionMode="Multiple">
-                    <ListViewItem>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="50" />
-                                <ColumnDefinition Width="400" />
-                                <ColumnDefinition Width="100" />
-                                <ColumnDefinition Width="100" />
-                                <ColumnDefinition Width="200" />
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" Text="1" />
-                            <TextBlock Grid.Column="1" Text="Fish, Tomatoes, fried chicken" Foreground="Chocolate" TextWrapping="Wrap"/>
-                            <TextBlock Grid.Column="2" Text="0.5" Foreground="Black" />
-                            <TextBlock Grid.Column="3" Text="Kg" Foreground="Black" />
-                            <TextBlock Grid.Column="5" Text="35.99" Foreground="Black" />
-                        </Grid>
-                    </ListViewItem>
-                    <ListViewItem>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="50" />
-                                <ColumnDefinition Width="400" />
-                                <ColumnDefinition Width="100" />
-                                <ColumnDefinition Width="100" />
-                                <ColumnDefinition Width="200" />
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" Text="1" />
-                            <TextBlock Grid.Column="1" Text="Fish, Tomatoes, fried chicken" Foreground="Chocolate" TextWrapping="Wrap"/>
-                            <TextBlock Grid.Column="2" Text="0.5" Foreground="Black" />
-                            <TextBlock Grid.Column="3" Text="Kg" Foreground="Black" />
-                            <TextBlock Grid.Column="5" Text="35.99" Foreground="Black" />
-                        </Grid>
-                    </ListViewItem>
+                <ListView SelectionMode="Multiple" ItemsSource="{Binding ProductsOrder}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="400" />
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="200" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="1" />
+                                <TextBlock Grid.Column="1" Text="{Binding Name}" Foreground="Chocolate" TextWrapping="Wrap"/>
+                                <TextBlock Grid.Column="2" Text="{Binding Amount}" Foreground="Black" />
+                                <TextBlock Grid.Column="3" Text="{Binding Unit}" Foreground="Black" />
+                                <TextBlock Grid.Column="5" Text="{Binding BruttoPrice}" Foreground="Black" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>                   
                 </ListView>
             </Grid>
             <Grid Grid.Column="0" Grid.Row="1">
@@ -73,12 +59,12 @@
                     <ColumnDefinition Width="0.25*" />
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Orientation="Horizontal">
-                    <TextBlock Text="Total Count :" Foreground="Black" FontSize="20" />
-                    <TextBlock Text="56" Foreground="Black" FontSize="20" />                    
+                    <TextBlock Text="Total Count : " Foreground="Black" FontSize="20" />
+                    <TextBlock Text="{Binding TotalCount}" Foreground="Black" FontSize="20" />
                 </StackPanel>
                 <StackPanel Grid.Column="2" Orientation="Horizontal">
-                    <TextBlock Text="Total due :" Foreground="Black" FontSize="20" />
-                    <TextBlock Text="698.63 $" Foreground="Black" FontSize="20" />
+                    <TextBlock Text="Total due : " Foreground="Black" FontSize="20" />
+                    <TextBlock Text="{Binding TotalDue}" Foreground="Black" FontSize="20" />
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="1" Grid.RowSpan="3">
@@ -91,20 +77,19 @@
                 <Button x:Name="AddNewProductManually" Grid.Row="0" Height="50" Width="250" Content="Add" Background="Chartreuse" />
                 <Button x:Name="AddNewProductCamera"  Grid.Row="1" Height="50" Width="250" Content="Add by camera" Background="Chartreuse" />
                 <Grid Grid.Row="2">
-                    
                 </Grid>
                 <Button x:Name="ProceedToPayment" Grid.Row="3" Height="50" Width="250" Content="Proceed to payment" Background="Chartreuse" />
-            </Grid>            
+            </Grid>
         </Grid>
     </Grid>
-    
+
     <Page.BottomAppBar>
         <AppBar IsHitTestVisible="True">
             <StackPanel Orientation="Horizontal">
-                <Button Content="Remove all" />                
+                <Button Content="Remove all" />
                 <Button Content="Remove" />
                 <Button Content="Update" />
             </StackPanel>
         </AppBar>
-    </Page.BottomAppBar>  
+    </Page.BottomAppBar>
 </Page>
