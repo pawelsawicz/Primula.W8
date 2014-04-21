@@ -55,7 +55,25 @@ namespace Primula.W8.ViewModels
 
         public void ProductSearch()
         {
-            
+            var mockCollection = new List<ProductSearchResultViewModel>();
+            mockCollection.Add(new ProductSearchResultViewModel()
+            {
+                Name = "Air Max",
+                Producer = "Nike",
+                Unit = UnitsEnum.Item,
+                BruttoPrice = 49.99M,
+                Currency = CurrencyEnum.USD
+            });
+            mockCollection.Add(new ProductSearchResultViewModel()
+            {
+                Name = "New Balance",
+                Producer = "Adidas",
+                Unit = UnitsEnum.Item,
+                BruttoPrice = 39.99M,
+                Currency = CurrencyEnum.USD
+            });
+
+            ProductSearchResult.AddRange(mockCollection);
         }
 
         public bool CanProductSearch
