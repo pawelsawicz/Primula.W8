@@ -112,6 +112,7 @@
     <Compile Include="Enums\CurrencyEnum.cs" />
     <Compile Include="Enums\PaymentMethodsEnum.cs" />
     <Compile Include="Enums\UnitsEnum.cs" />
+    <Compile Include="NotifyViewModels\ProductOrderViewModel.cs" />
     <Compile Include="NotifyViewModels\ProductSearchResultViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CashPaymentViewModel.cs" />
