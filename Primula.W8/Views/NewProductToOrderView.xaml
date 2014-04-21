@@ -7,11 +7,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     
-    <Page.Resources>
-        <CollectionViewSource
-            x:Name="itemsViewSource"
-            Source="{Binding ProductSearchResult}"/>
-    </Page.Resources>
     
     <Grid Style="{StaticResource MainGridThemeResource}">
         <Grid.RowDefinitions>
