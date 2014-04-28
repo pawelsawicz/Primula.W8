@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 
 namespace Primula.W8.ViewModels
 {
@@ -27,7 +28,7 @@ namespace Primula.W8.ViewModels
         {
             get;
             private set;
-        }
+        }        
 
         private string _title;
         public string Title
@@ -58,6 +59,7 @@ namespace Primula.W8.ViewModels
             var mockCollection = new List<ProductSearchResultViewModel>();
             mockCollection.Add(new ProductSearchResultViewModel()
             {
+                ProductId = 1,
                 Name = "Air Max",
                 Producer = "Nike",
                 Unit = UnitsEnum.Item,
@@ -66,6 +68,7 @@ namespace Primula.W8.ViewModels
             });
             mockCollection.Add(new ProductSearchResultViewModel()
             {
+                ProductId = 2,
                 Name = "New Balance",
                 Producer = "Adidas",
                 Unit = UnitsEnum.Item,
@@ -89,9 +92,34 @@ namespace Primula.W8.ViewModels
             }
         }
 
+        private int _selectedProductId { get; set; }
+
+        public void ProductSearchSelectionChanged(SelectionChangedEventArgs eventArgs)
+        {
+            var itemSelected = (ProductSearchResultViewModel)eventArgs.AddedItems.FirstOrDefault();
+
+            if (itemSelected != null)
+            {
+                _selectedProductId = itemSelected.ProductId;
+            }
+        }
+
+        public bool CanAddProductToOrder
+        {
+            get
+            {
+                if (_selectedProductId != 0)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+        }
+
         public void AddProductToOrder()
-        {            
-            _navigationService.Navigate(typeof(DashboardView));
+        {
+            _navigationService.UriFor<OrderCandidateViewModel>().WithParam<int>(viewModel => viewModel.ProductIdFromSearchEngine, _selectedProductId).Navigate();
         }
 
         public void ClearProductSearch()

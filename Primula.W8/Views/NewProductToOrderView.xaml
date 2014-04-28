@@ -5,6 +5,7 @@
     xmlns:local="using:Primula.W8.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:caliburn="using:Caliburn.Micro"
     mc:Ignorable="d">
     
     
@@ -35,7 +36,7 @@
                 <TextBox x:Name="SearchQuery" Style="{StaticResource TextBoxGreenInput}"/>
             </Grid>            
             <Grid Grid.Row="1" Grid.ColumnSpan="2">
-                <ListBox SelectionMode="Single" ItemsSource="{Binding ProductSearchResult}">
+                <ListBox SelectionMode="Single" ItemsSource="{Binding ProductSearchResult}" caliburn:Message.Attach="[Event SelectionChanged] = [ProductSearchSelectionChanged($eventArgs)]" >
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid Width="900">
