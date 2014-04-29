@@ -36,7 +36,7 @@
                 <TextBox x:Name="SearchQuery" Style="{StaticResource TextBoxGreenInput}"/>
             </Grid>            
             <Grid Grid.Row="1" Grid.ColumnSpan="2">
-                <ListBox SelectionMode="Single" ItemsSource="{Binding ProductSearchResult}" caliburn:Message.Attach="[Event SelectionChanged] = [ProductSearchSelectionChanged($eventArgs)]" >
+                <ListBox SelectionMode="Single" ItemsSource="{Binding ProductSearchResult}" caliburn:Message.Attach="[Event SelectionChanged] = [ProductSearchSelectionChanged($eventArgs)]">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid Width="900">

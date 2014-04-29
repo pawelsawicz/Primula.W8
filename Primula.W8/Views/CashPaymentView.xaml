@@ -5,6 +5,7 @@
     xmlns:local="using:Primula.W8.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:caliburn="using:Caliburn.Micro"
     mc:Ignorable="d">
 
     <Grid Style="{StaticResource MainGridThemeResource}">
@@ -33,11 +34,11 @@
                 <TextBlock Text="Customer section" Style="{StaticResource TextCustomerSectionTitle}"/>
                 <Grid Margin="0 0 0 12">
                     <TextBlock Text="Cash :" Style="{StaticResource TextBoxLabels}" VerticalAlignment="Center" />
-                    <TextBox Style="{StaticResource TextBoxGreenInput}" Margin="24 0 0 0" />
+                    <TextBox x:Name="CustomerCash" Style="{StaticResource TextBoxGreenInput}" Margin="24 0 0 0"/>
                 </Grid>
                 <Grid>
                     <TextBlock Text="Change :" Style="{StaticResource TextBoxLabels}" VerticalAlignment="Center" />
-                    <TextBlock Text="25$" Style="{StaticResource TextBoxLabels}" HorizontalAlignment="Center" />
+                    <TextBlock Text="{Binding Change}" Style="{StaticResource TextBoxLabels}" HorizontalAlignment="Center"/>
                 </Grid>
             </StackPanel>
             <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical">
@@ -86,7 +87,7 @@
                 </Grid>
                 <Grid>
                     <TextBlock Text="Total Due :" Style="{StaticResource TextBoxLabels}" FontSize="36"/>
-                    <TextBlock Text="699$" Style="{StaticResource TextBoxLabels}" HorizontalAlignment="Center" FontSize="36" />
+                    <TextBlock Text="{Binding TotalDue}" Style="{StaticResource TextBoxLabels}" HorizontalAlignment="Center" FontSize="36" />
                 </Grid>
             </StackPanel>
             <Grid Grid.Row="1" Grid.Column="1">
