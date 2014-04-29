@@ -32,6 +32,19 @@ namespace Primula.W8.ViewModels
             _navigationService.Navigate(typeof(TypeOfPaymentView));
         }
 
+        public bool CanProceedToPayment
+        {
+            get
+            {
+                if (ProductsOrder.Count != 0)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+        }
+
         public void AddNewProductManually()
         {
             _navigationService.Navigate(typeof(NewProductToOrderView));
